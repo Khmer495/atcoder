@@ -13,7 +13,6 @@ for cur_s in s[1:]:
     else:
         l_r += 1
     prev_s = cur_s
-    print(cur_s,l_r, r_l)
 
 if min(l_r, r_l) >= k:
     ans += 2 * k
