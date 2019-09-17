@@ -1,16 +1,17 @@
 from collections import deque
+import sys
 
-n, q = [int(i) for i in input().split()]
+n, q, *args = map(int, open(0).read().split())
+ab = args[:(n-1)*2]
+px = args[(n-1)*2:]
 
 tree = [[] for _ in range(n+1)]
-for _ in range(n-1):
-    a, b = [int(i) for i in input().split()]
+for a, b in zip(*[iter(ab)]*2):
     tree[a].append(b)
     tree[b].append(a)
 
 counter = [0] * (n+1)
-for _ in range(q):
-    p, x = [int(i) for i in input().split()]
+for p, x in zip(*[iter(px)]*2):
     counter[p] += x
 
 # pop, appendまたはQueueライブラリだと間に合わない
