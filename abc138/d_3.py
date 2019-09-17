@@ -1,5 +1,4 @@
 from collections import deque
-import sys
 
 n, q, *args = map(int, open(0).read().split())
 ab = args[:(n-1)*2]
