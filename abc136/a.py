@@ -1,7 +1,7 @@
 def main():
-    s, = map(int, open(0).read().split())
+    a, b, c = map(int, open(0).read().split())
 
-    ans = ''
+    ans = max(0, c - (a - b))
     print(ans)
     return()
 
